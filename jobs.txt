@@ -1,0 +1,18 @@
+# THE DEEP DIVER — JOB LIST
+# One job per line. Lines starting with # are notes and are skipped.
+# Job shapes:
+#   fetch  <document-url>  <shelf-name>
+#   search <archive.org search words>  <shelf-name>
+#
+# JOB 1 — THE FIRST SLICE (run this first; it proves the whole chain)
+# The President's Intelligence Checklist, 13 October 1962 — 7 pages,
+# text layer verified by the desk. Three days before the Cuban Missile
+# Crisis photographs. The Diver files it; what it means is the desk's job.
+fetch https://archive.org/download/cia-readingroom-document-0005995979/0005995979_text.pdf reading-room
+#
+# JOB 2 — DIE-CAST DIVE 2, THE DOWNLOADABLE SCATTER (1970-1999)
+# The journal shelf ends at 1961; this pulls every die-casting text the
+# archive dates 1970-1999. Duplicates of Dive 1 are recognised by
+# fingerprint ONLY if Dive 1's pond is merged first — on a fresh pond
+# they will be kept once, here. Remove the # when Job 1 has passed.
+#search title:(die casting) AND mediatype:texts AND date:[1970 TO 1999] die-cast-70-99
